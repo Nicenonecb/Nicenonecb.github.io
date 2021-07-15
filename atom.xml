@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-14T12:10:32.531Z</updated>
+  <updated>2021-07-15T16:05:04.891Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-7-15 算法</title>
+    <link href="http://example.com/2021/07/15/daycode/7.15/"/>
+    <id>http://example.com/2021/07/15/daycode/7.15/</id>
+    <published>2021-07-15T14:07:44.713Z</published>
+    <updated>2021-07-15T16:05:04.891Z</updated>
+    
+    <content type="html"><![CDATA[<p>将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。</p><p>比如输入字符串为 “PAYPALISHIRING” 行数为 3 时，排列如下：</p><p>P   A   H   N<br>A P L S I I G<br>Y   I   R<br>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：”PAHNAPLSIIGYIR”。</p><p>请你实现这个将字符串进行指定行数变换的函数：</p><p>string convert(string s, int numRows);</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">covert</span>(<span class="params">str,numrows</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(numrows===<span class="number">1</span>)<span class="keyword">return</span> str</span><br><span class="line">  <span class="keyword">const</span> rows = [];</span><br><span class="line">  <span class="keyword">const</span> len = <span class="built_in">Math</span>.min(str.length,numrows)</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;len;i++) <span class="keyword">return</span> rows[i] = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">let</span> down  =<span class="literal">false</span> ,loc=<span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> a <span class="keyword">of</span> s)&#123;</span><br><span class="line">    rows[loc]+=a</span><br><span class="line">    <span class="keyword">if</span>(loc===<span class="number">0</span>||loc===numrows-<span class="number">1</span>)&#123;</span><br><span class="line">      down=!down</span><br><span class="line">      loc +=down?<span class="number">1</span>:-<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> ans = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> b <span class="keyword">of</span> rows)&#123;</span><br><span class="line">    ans +=b</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。&lt;/p&gt;
+&lt;p&gt;比如输入字符串为 “PAYPALISHIRING” 行数为 3 时，排列如下：&lt;/p&gt;
+&lt;p&gt;P   A   H   N&lt;br&gt;A P L S I I G&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-7-15学习</title>
+    <link href="http://example.com/2021/07/15/daylearn/2021.7.15/"/>
+    <id>http://example.com/2021/07/15/daylearn/2021.7.15/</id>
+    <published>2021-07-14T16:58:01.413Z</published>
+    <updated>2021-07-15T16:08:19.279Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-ArrayBuffer和Blob的区别？"><a href="#1-ArrayBuffer和Blob的区别？" class="headerlink" title="1.ArrayBuffer和Blob的区别？"></a>1.ArrayBuffer和Blob的区别？</h3><p>ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。</p><p>它是一个字节数组，通常在其他语言中称为“byte array”。</p><h3 id="2-定型数组"><a href="#2-定型数组" class="headerlink" title="2.定型数组"></a>2.定型数组</h3><h3 id="3-迭代器原理"><a href="#3-迭代器原理" class="headerlink" title="3.迭代器原理"></a>3.迭代器原理</h3><p>*[symbol iterator]</p><h3 id="4-single-spa文档"><a href="#4-single-spa文档" class="headerlink" title="4.single-spa文档"></a>4.single-spa文档</h3><h3 id="5-js语言的优缺点"><a href="#5-js语言的优缺点" class="headerlink" title="5.js语言的优缺点"></a>5.js语言的优缺点</h3><p>Advantages of JavaScript<br>Speed. Client-side JavaScript is very fast because it can be run immediately within the client-side browser. Unless outside resources are required, JavaScript is unhindered by network calls to a backend server.</p><p>Simplicity. JavaScript is relatively simple to learn and implement.</p><p>Popularity. JavaScript is used everywhere on the web.</p><p>Interoperability. JavaScript plays nicely with other languages and can be used in a huge variety of applications.</p><p>Server Load. Being client-side reduces the demand on the website server.</p><p>Gives the ability to create rich interfaces.</p><p>Disadvantages of JavaScript<br>Client-Side Security. Because the code executes on the users’ computer, in some cases it can be exploited for malicious purposes. This is one reason some people choose to disable Javascript.</p><p>Browser Support. JavaScript is sometimes interpreted differently by different browsers. This makes it somewhat difficult to write cross-browser code.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-ArrayBuffer和Blob的区别？&quot;&gt;&lt;a href=&quot;#1-ArrayBuffer和Blob的区别？&quot; class=&quot;headerlink&quot; title=&quot;1.ArrayBuffer和Blob的区别？&quot;&gt;&lt;/a&gt;1.ArrayBuffer和Blob的区</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-7-14 算法</title>
