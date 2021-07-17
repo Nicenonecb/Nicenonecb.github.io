@@ -9,15 +9,15 @@
         <meta name="keywords" content="day[learn]" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1.ArrayBuffer和Blob的区别？ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。 它是一个字节数组，通常在其他语言中称为“byte array”。 2.定型数组3.迭代器原理*[symbol iterator] 4.single-spa文档5.js语言的优缺点Advantages of JavaScriptSpeed. Client-side JavaScr">
+    <meta name="description" content="1.ArrayBuffer和Blob的区别？ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。它是一个字节数组，通常在其他语言中称为“byte array”。不能直接操纵一个ArrayBuffer中的内容；需要创建一个类型化数组的视图或一个描述缓冲数据格式的DataView，使用这些api来读写缓冲区中的内容. Blob操作二进制文件ArrayBuffer 用于操作内存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2021-7-15学习">
 <meta property="og:url" content="http://example.com/2021/07/15/daylearn/2021.7.15/index.html">
 <meta property="og:site_name" content="孤独快乐的时光">
-<meta property="og:description" content="1.ArrayBuffer和Blob的区别？ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。 它是一个字节数组，通常在其他语言中称为“byte array”。 2.定型数组3.迭代器原理*[symbol iterator] 4.single-spa文档5.js语言的优缺点Advantages of JavaScriptSpeed. Client-side JavaScr">
+<meta property="og:description" content="1.ArrayBuffer和Blob的区别？ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。它是一个字节数组，通常在其他语言中称为“byte array”。不能直接操纵一个ArrayBuffer中的内容；需要创建一个类型化数组的视图或一个描述缓冲数据格式的DataView，使用这些api来读写缓冲区中的内容. Blob操作二进制文件ArrayBuffer 用于操作内存">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-14T16:58:01.413Z">
-<meta property="article:modified_time" content="2021-07-15T16:08:19.279Z">
+<meta property="article:modified_time" content="2021-07-17T10:18:07.167Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="day[learn]">
 <meta name="twitter:card" content="summary">
@@ -203,7 +203,7 @@
                             &nbsp;
                             day[learn]
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/13/daylearn/2021.7.13/">2021-7-13学习</a></li>  <li class="file"><a href="/2021/07/14/daylearn/2021.7.14/">2021-7-14学习</a></li>  <li class="file active"><a href="/2021/07/15/daylearn/2021.7.15/">2021-7-15学习</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/13/daylearn/2021.7.13/">2021-7-13学习</a></li>  <li class="file"><a href="/2021/07/14/daylearn/2021.7.14/">2021-7-14学习</a></li>  <li class="file active"><a href="/2021/07/15/daylearn/2021.7.15/">2021-7-15学习</a></li>  <li class="file"><a href="/2021/07/16/daylearn/2021.7.16/">2021-7-16学习</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -351,10 +351,12 @@
             
         
         
-            <h3 id="1-ArrayBuffer和Blob的区别？"><a href="#1-ArrayBuffer和Blob的区别？" class="headerlink" title="1.ArrayBuffer和Blob的区别？"></a>1.ArrayBuffer和Blob的区别？</h3><p>ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。</p>
-<p>它是一个字节数组，通常在其他语言中称为“byte array”。</p>
-<h3 id="2-定型数组"><a href="#2-定型数组" class="headerlink" title="2.定型数组"></a>2.定型数组</h3><h3 id="3-迭代器原理"><a href="#3-迭代器原理" class="headerlink" title="3.迭代器原理"></a>3.迭代器原理</h3><p>*[symbol iterator]</p>
-<h3 id="4-single-spa文档"><a href="#4-single-spa文档" class="headerlink" title="4.single-spa文档"></a>4.single-spa文档</h3><h3 id="5-js语言的优缺点"><a href="#5-js语言的优缺点" class="headerlink" title="5.js语言的优缺点"></a>5.js语言的优缺点</h3><p>Advantages of JavaScript<br>Speed. Client-side JavaScript is very fast because it can be run immediately within the client-side browser. Unless outside resources are required, JavaScript is unhindered by network calls to a backend server.</p>
+            <h3 id="1-ArrayBuffer和Blob的区别？"><a href="#1-ArrayBuffer和Blob的区别？" class="headerlink" title="1.ArrayBuffer和Blob的区别？"></a>1.ArrayBuffer和Blob的区别？</h3><p>ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。它是一个字节数组，通常在其他语言中称为“byte array”。<br>不能直接操纵一个ArrayBuffer中的内容；需要创建一个类型化数组的视图或一个描述缓冲数据格式的DataView，使用这些api来读写缓冲区中的内容.</p>
+<p>Blob操作二进制文件<br>ArrayBuffer 用于操作内存</p>
+<h3 id="2-定型数组"><a href="#2-定型数组" class="headerlink" title="2.定型数组"></a>2.定型数组</h3><p>定型数组具有固定的长度和固定的数值元素类型，支持对二进制数据的字节级访问</p>
+<h3 id="3-迭代器原理"><a href="#3-迭代器原理" class="headerlink" title="3.迭代器原理"></a>3.迭代器原理</h3><p>*[symbol iterator]</p>
+<h3 id="4-single-spa文档"><a href="#4-single-spa文档" class="headerlink" title="4.single-spa文档"></a>4.single-spa文档</h3><p>后面形成xmind</p>
+<h3 id="5-js语言的优缺点"><a href="#5-js语言的优缺点" class="headerlink" title="5.js语言的优缺点"></a>5.js语言的优缺点</h3><p>Advantages of JavaScript<br>Speed. Client-side JavaScript is very fast because it can be run immediately within the client-side browser. Unless outside resources are required, JavaScript is unhindered by network calls to a backend server.</p>
 <p>Simplicity. JavaScript is relatively simple to learn and implement.</p>
 <p>Popularity. JavaScript is used everywhere on the web.</p>
 <p>Interoperability. JavaScript plays nicely with other languages and can be used in a huge variety of applications.</p>
