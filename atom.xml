@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-17T10:08:48.434Z</updated>
+  <updated>2021-07-18T17:09:21.309Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-7-19 算法</title>
+    <link href="http://example.com/2021/07/19/daycode/7.19/"/>
+    <id>http://example.com/2021/07/19/daycode/7.19/</id>
+    <published>2021-07-18T17:03:28.931Z</published>
+    <updated>2021-07-18T17:09:21.309Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现Promise.race</span></span><br><span class="line"><span class="comment">//比较简单无聊</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myPromiserace</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">item</span>=&gt;</span>&#123;</span><br><span class="line">      <span class="built_in">Promise</span>.resolve(item).then(<span class="function"><span class="params">data</span>=&gt;</span>&#123;</span><br><span class="line">        resolve(data)</span><br><span class="line">      &#125;,<span class="function"><span class="params">err</span>=&gt;</span>&#123;</span><br><span class="line">        reject(data)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-7-16学习</title>
