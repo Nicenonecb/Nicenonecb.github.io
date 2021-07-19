@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-18T17:09:21.309Z</updated>
+  <updated>2021-07-19T14:41:12.977Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-7-19学习</title>
+    <link href="http://example.com/2021/07/19/daylearn/2021.7.19/"/>
+    <id>http://example.com/2021/07/19/daylearn/2021.7.19/</id>
+    <published>2021-07-19T05:11:43.750Z</published>
+    <updated>2021-07-19T14:41:12.977Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-Babel-的微内核架构"><a href="#1-Babel-的微内核架构" class="headerlink" title="1. Babel  的微内核架构"></a>1. Babel  的微内核架构</h3><p>webpack和babel都采用了微内核架构,通过plugin来丰富自己的功能<br><img src="https://i.loli.net/2021/07/19/SFuQHNtGvhjkc3Z.png" alt="babel.jpg"></p><h3 id="2-Array-at-method-方法应用"><a href="#2-Array-at-method-方法应用" class="headerlink" title="2.  Array.at  method 方法应用"></a>2.  Array.at  method 方法应用</h3><p>支持负索引</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr =[a,b,c,d]</span><br><span class="line">arr[-<span class="number">1</span>]<span class="comment">//d</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//如果下标为负  计算方式为array.length+负index</span></span><br></pre></td></tr></table></figure><h3 id="3-不用proxy-如何阻止一个对象的key-value被修改"><a href="#3-不用proxy-如何阻止一个对象的key-value被修改" class="headerlink" title="3.不用proxy 如何阻止一个对象的key value被修改"></a>3.不用proxy 如何阻止一个对象的key value被修改</h3><p>Object.freeze/seal</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xw =&#123;</span><br><span class="line">  <span class="attr">age</span>:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.freeze(xw)</span><br></pre></td></tr></table></figure><h3 id="4-ajax和-axios的区别"><a href="#4-ajax和-axios的区别" class="headerlink" title="4.ajax和 axios的区别"></a>4.ajax和 axios的区别</h3><table><thead><tr><th align="left">axios</th><th align="left">ajax</th></tr></thead><tbody><tr><td align="left">+ 从node.js创建http请求</td><td align="left">本身是针对MVC的编程，不符合现在前端的MVVM的浪潮</td></tr><tr><td align="left">·                             基于原生的XHR开发，XHR本身的架构不清晰，已经有了fetch的替代方案</td><td align="left"></td></tr></tbody></table><pre><code>                  |          Jquery整个项目太大， 单纯使用ajax却要引入整个Jquery非常的不合理</code></pre><ul><li>支持Promise API        </li><li>客户端支持防止CSRF</li><li>提供了一些并发请求的接口</li></ul><p>axios 特性有                         </p><ul><li>从node.js创建http请求</li><li>支持Promise API</li><li>客户端支持防止CSRF</li><li>提供了一些并发请求的接口</li></ul><p>ajax特性有</p><p>本身是针对MVC的编程，不符合现在前端的MVVM的浪潮<br>基于原生的XHR开发，XHR本身的架构不清晰，已经有了fetch的替代方案<br>Jquery整个项目太大， 单纯使用ajax却要引入整个Jquery非常的不合理</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-Babel-的微内核架构&quot;&gt;&lt;a href=&quot;#1-Babel-的微内核架构&quot; class=&quot;headerlink&quot; title=&quot;1. Babel  的微内核架构&quot;&gt;&lt;/a&gt;1. Babel  的微内核架构&lt;/h3&gt;&lt;p&gt;webpack和babel都采用了微</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-7-19 算法</title>
