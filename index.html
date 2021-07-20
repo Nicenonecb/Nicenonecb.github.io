@@ -189,7 +189,7 @@
                             &nbsp;
                             day[code]
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/14/daycode/7.13/">2021-7-13 算法</a></li>  <li class="file"><a href="/2021/07/14/daycode/7.14/">2021-7-14 算法</a></li>  <li class="file"><a href="/2021/07/15/daycode/7.15/">2021-7-15 算法</a></li>  <li class="file"><a href="/2021/07/19/daycode/7.19/">2021-7-19 算法</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/14/daycode/7.13/">2021-7-13 算法</a></li>  <li class="file"><a href="/2021/07/14/daycode/7.14/">2021-7-14 算法</a></li>  <li class="file"><a href="/2021/07/15/daycode/7.15/">2021-7-15 算法</a></li>  <li class="file"><a href="/2021/07/19/daycode/7.19/">2021-7-19 算法</a></li>  <li class="file"><a href="/2021/07/20/daycode/7.20/">2021-7-20 算法</a></li>  <li class="file"><a href="/2021/07/21/daycode/7.21/">2021-7-21 算法</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -281,6 +281,172 @@
 </aside>
             
             <section id="main">
+        <article id="post-daycode/7.21" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/day-code/">day[code]</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/day-code/" rel="tag">day[code]</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2021/07/21/daycode/7.21/">
+            <time datetime="2021-07-20T23:06:39.593Z" itemprop="datePublished">2021-07-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daycode/7.21.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daycode/7.21.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daycode/7.21.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2021/07/21/daycode/7.21/">2021-7-21 算法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>力扣 11. 盛最多水的容器<br>[网址]<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/container-with-most-water/">https://leetcode-cn.com/problems/container-with-most-water/</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//还是双指针</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxArea</span>(<span class="params">height</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> l =<span class="number">0</span>,r = height.length-<span class="number">1</span>,res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">    <span class="keyword">let</span> area=<span class="built_in">Math</span>.min(height[l],height[r])*(r-l)</span><br><span class="line">    res =<span class="built_in">Math</span>.max(res,area)</span><br><span class="line">    <span class="keyword">if</span>(height[l]&lt;height[r])&#123;</span><br><span class="line">      l++</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      r--</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-daycode/7.20" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/day-code/">day[code]</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/day-code/" rel="tag">day[code]</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2021/07/20/daycode/7.20/">
+            <time datetime="2021-07-20T14:09:08.988Z" itemprop="datePublished">2021-07-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daycode/7.20.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daycode/7.20.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daycode/7.20.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2021/07/20/daycode/7.20/">2021-7-20 算法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-daylearn/2021.7.20" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -351,12 +517,20 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
             
         
         
             <h3 id="1-树的先中后序遍历"><a href="#1-树的先中后序遍历" class="headerlink" title="1. 树的先中后序遍历"></a>1. 树的先中后序遍历</h3><p>   先中后遍历区别在遍历根节点的时机<br>   <img src="https://i.loli.net/2021/07/20/z7no9QZeKHhTMCL.png" alt="树的遍历.jpg"><br>   先序：ABDECF<br>   中序：BDEACF<br>   后序：BDECFA</p>
 <h3 id="2-计算机主存储器-及bit-字，字节区分"><a href="#2-计算机主存储器-及bit-字，字节区分" class="headerlink" title="2. 计算机主存储器  及bit 字，字节区分"></a>2. 计算机主存储器  及bit 字，字节区分</h3><p><img src="https://i.loli.net/2021/07/20/9wyD3htIPdW8sna.png" alt="存储.jpg"></p>
-
+<h3 id="3-URL-searchParams-使用"><a href="#3-URL-searchParams-使用" class="headerlink" title="3.URL.searchParams 使用"></a>3.URL.searchParams 使用</h3><p>处理url 参数<br>var URLSearchParams = new URLSearchParams(init);</p>
+<h3 id="4-ts中非空断言"><a href="#4-ts中非空断言" class="headerlink" title="4.ts中非空断言!."></a>4.ts中非空断言!.</h3><p>在变量后面添加一个 ! 就会忽略 undefined 和 null。<br>在react中获取dom节点，React refs 可以用来访问 HTML 节点 DOM。ref.current 的值有时可能是 null（这是因为引用的元素还没有 mounted）<br>在很多情况下，我们能确定 current 元素已经 mounted，因此，null 是不需要的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> ScrolledInput = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">   <span class="keyword">const</span> ref = React.createRef&lt;HTMLInputElement&gt;();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> goToInput = <span class="function">() =&gt;</span> ref.current.scrollIntoView(); <span class="comment">//compilation error: ref.current is possibly null</span></span><br><span class="line">   <span class="comment">// const goToInput = () =&gt; ref.current!.scrollIntoView(); 优化做法</span></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">       <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;/</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToInput&#125;</span>&gt;</span>Go to Input<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -1047,199 +1221,6 @@
             </div>   
             <div class="article-more-link">
                 <a href="/2021/07/14/daylearn/2021.7.14/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-daycode/7.13" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/day-code/">day[code]</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/day-code/" rel="tag">day[code]</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2021/07/14/daycode/7.13/">
-            <time datetime="2021-07-13T16:30:21.844Z" itemprop="datePublished">2021-07-14</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daycode/7.13.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daycode/7.13.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daycode/7.13.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2021/07/14/daycode/7.13/">2021-7-13 算法</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            <p>最长回文字符串</p>
-<p>回文就是正着读反着读都可以的</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//中心扩散法</span></span><br><span class="line"><span class="keyword">let</span> s= <span class="string">&#x27;babad&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">longStr</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;s.length;i++)&#123;</span><br><span class="line">    helper(i,i)</span><br><span class="line">    helper(i,i+<span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">helper</span>(<span class="params">m,n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(m&gt;=<span class="number">0</span>&amp;&amp;n&lt;s.length&amp;&amp;s[m]===s[n])&#123;</span><br><span class="line">      m--;</span><br><span class="line">      n++</span><br><span class="line">      <span class="keyword">if</span>(n-m-<span class="number">1</span>&gt;res.length)&#123;</span><br><span class="line">        res = s.slice(m-<span class="number">1</span>,n)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(longStr(s))</span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-daylearn/2021.7.13" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/day-learn/">day[learn]</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/day-learn/" rel="tag">day[learn]</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2021/07/13/daylearn/2021.7.13/">
-            <time datetime="2021-07-13T10:24:34.471Z" itemprop="datePublished">2021-07-13</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daylearn/2021.7.13.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daylearn/2021.7.13.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daylearn/2021.7.13.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2021/07/13/daylearn/2021.7.13/">2021-7-13学习</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p><h4 id="1-ts中泛型是什么（回顾）"><a href="#1-ts中泛型是什么（回顾）" class="headerlink" title="1.ts中泛型是什么（回顾）"></a>1.ts中泛型是什么（回顾）</h4><p>复用定义的数据接口</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不用泛型写</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>(<span class="params">arg: number</span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//采用泛型，对返回值类型进行约束</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-控制反转"><a href="#2-控制反转" class="headerlink" title="2.控制反转"></a>2.控制反转</h4><p>缩写常见（IoC）</p>
-<p>面向对象的设计原则，降低代码耦合度,常见实现方法是依赖注入和依赖查找</p>
-<p>
-                
-            
-        
-        
-            </div>   
-            <div class="article-more-link">
-                <a href="/2021/07/13/daylearn/2021.7.13/#more">Read More</a>
             </div>
         
         <footer class="article-footer">

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-20T00:19:38.753Z</updated>
+  <updated>2021-07-20T23:12:11.873Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021-7-21 算法</title>
+    <link href="http://example.com/2021/07/21/daycode/7.21/"/>
+    <id>http://example.com/2021/07/21/daycode/7.21/</id>
+    <published>2021-07-20T23:06:39.593Z</published>
+    <updated>2021-07-20T23:12:11.873Z</updated>
+    
+    <content type="html"><![CDATA[<p>力扣 11. 盛最多水的容器<br>[网址]<a href="https://leetcode-cn.com/problems/container-with-most-water/">https://leetcode-cn.com/problems/container-with-most-water/</a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//还是双指针</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxArea</span>(<span class="params">height</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> l =<span class="number">0</span>,r = height.length-<span class="number">1</span>,res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">    <span class="keyword">let</span> area=<span class="built_in">Math</span>.min(height[l],height[r])*(r-l)</span><br><span class="line">    res =<span class="built_in">Math</span>.max(res,area)</span><br><span class="line">    <span class="keyword">if</span>(height[l]&lt;height[r])&#123;</span><br><span class="line">      l++</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      r--</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;力扣 11. 盛最多水的容器&lt;br&gt;[网址]&lt;a href=&quot;https://leetcode-cn.com/problems/container-with-most-water/&quot;&gt;https://leetcode-cn.com/problems/container-wi</summary>
+      
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-7-20 算法</title>
+    <link href="http://example.com/2021/07/20/daycode/7.20/"/>
+    <id>http://example.com/2021/07/20/daycode/7.20/</id>
+    <published>2021-07-20T14:09:08.988Z</published>
+    <updated>2021-07-20T23:12:18.549Z</updated>
+    
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021-7-20学习</title>
     <link href="http://example.com/2021/07/20/daylearn/2021.7.20/"/>
     <id>http://example.com/2021/07/20/daylearn/2021.7.20/</id>
     <published>2021-07-19T23:39:48.052Z</published>
-    <updated>2021-07-20T00:19:38.753Z</updated>
+    <updated>2021-07-20T23:29:48.052Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-树的先中后序遍历"><a href="#1-树的先中后序遍历" class="headerlink" title="1. 树的先中后序遍历"></a>1. 树的先中后序遍历</h3><p>   先中后遍历区别在遍历根节点的时机<br>   <img src="https://i.loli.net/2021/07/20/z7no9QZeKHhTMCL.png" alt="树的遍历.jpg"><br>   先序：ABDECF<br>   中序：BDEACF<br>   后序：BDECFA</p><h3 id="2-计算机主存储器-及bit-字，字节区分"><a href="#2-计算机主存储器-及bit-字，字节区分" class="headerlink" title="2. 计算机主存储器  及bit 字，字节区分"></a>2. 计算机主存储器  及bit 字，字节区分</h3><p><img src="https://i.loli.net/2021/07/20/9wyD3htIPdW8sna.png" alt="存储.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-树的先中后序遍历"><a href="#1-树的先中后序遍历" class="headerlink" title="1. 树的先中后序遍历"></a>1. 树的先中后序遍历</h3><p>   先中后遍历区别在遍历根节点的时机<br>   <img src="https://i.loli.net/2021/07/20/z7no9QZeKHhTMCL.png" alt="树的遍历.jpg"><br>   先序：ABDECF<br>   中序：BDEACF<br>   后序：BDECFA</p><h3 id="2-计算机主存储器-及bit-字，字节区分"><a href="#2-计算机主存储器-及bit-字，字节区分" class="headerlink" title="2. 计算机主存储器  及bit 字，字节区分"></a>2. 计算机主存储器  及bit 字，字节区分</h3><p><img src="https://i.loli.net/2021/07/20/9wyD3htIPdW8sna.png" alt="存储.jpg"></p><h3 id="3-URL-searchParams-使用"><a href="#3-URL-searchParams-使用" class="headerlink" title="3.URL.searchParams 使用"></a>3.URL.searchParams 使用</h3><p>处理url 参数<br>var URLSearchParams = new URLSearchParams(init);</p><h3 id="4-ts中非空断言"><a href="#4-ts中非空断言" class="headerlink" title="4.ts中非空断言!."></a>4.ts中非空断言!.</h3><p>在变量后面添加一个 ! 就会忽略 undefined 和 null。<br>在react中获取dom节点，React refs 可以用来访问 HTML 节点 DOM。ref.current 的值有时可能是 null（这是因为引用的元素还没有 mounted）<br>在很多情况下，我们能确定 current 元素已经 mounted，因此，null 是不需要的。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> ScrolledInput = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">   <span class="keyword">const</span> ref = React.createRef&lt;HTMLInputElement&gt;();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> goToInput = <span class="function">() =&gt;</span> ref.current.scrollIntoView(); <span class="comment">//compilation error: ref.current is possibly null</span></span><br><span class="line">   <span class="comment">// const goToInput = () =&gt; ref.current!.scrollIntoView(); 优化做法</span></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">       <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;/</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToInput&#125;</span>&gt;</span>Go to Input<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
