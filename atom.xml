@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-20T23:12:11.873Z</updated>
+  <updated>2021-07-26T14:26:14.320Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-7-26 算法</title>
+    <link href="http://example.com/2021/07/26/daycode/7.26/"/>
+    <id>http://example.com/2021/07/26/daycode/7.26/</id>
+    <published>2021-07-26T13:44:49.037Z</published>
+    <updated>2021-07-26T14:26:14.320Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//红绿灯控制</span></span><br><span class="line"><span class="comment">// 红灯3秒亮一次，黄灯2秒亮一次，绿灯1秒亮一次；如何让三个灯不断交替重复亮灯？（用Promise实现）</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">red</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;red&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">green</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;green&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">yellow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;yellow&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> light = <span class="function"><span class="keyword">function</span> (<span class="params">timer, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      cb()</span><br><span class="line">      resolve()</span><br><span class="line">    &#125;, timer)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> step = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">Promise</span>.resolve().then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> light(<span class="number">3000</span>, red)</span><br><span class="line">  &#125;).then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> light(<span class="number">2000</span>, yellow)</span><br><span class="line">  &#125;).then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> light(<span class="number">1000</span>, green)</span><br><span class="line">  &#125;).then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> step()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">step();</span><br><span class="line"><span class="comment">//力扣 31下一个排列</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nextMax</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> i = nums.length -<span class="number">2</span></span><br><span class="line">  <span class="keyword">while</span>(i&gt;=<span class="number">0</span>&amp;&amp;nums[i]&gt;nums[i+<span class="number">1</span>])&#123;</span><br><span class="line">    i--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(i&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> j = nums.length -<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(j&gt;=<span class="number">0</span>&amp;&amp;nums[j]&lt;=nums[i])&#123;</span><br><span class="line">      j--</span><br><span class="line">    &#125;</span><br><span class="line">    [nums[i],nums[j]]=[nums[j],nums[i]]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> l = i+<span class="number">1</span></span><br><span class="line">  <span class="keyword">let</span> r  = nums.length -<span class="number">1</span></span><br><span class="line">  <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">    [nums[l],nums[r]] =[nums[r],nums[l]]</span><br><span class="line">    l++;</span><br><span class="line">    r--</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-7-23学习</title>
+    <link href="http://example.com/2021/07/25/daylearn/2021.7.23/"/>
+    <id>http://example.com/2021/07/25/daylearn/2021.7.23/</id>
+    <published>2021-07-25T04:50:50.283Z</published>
+    <updated>2021-07-25T05:05:36.784Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-异或思想"><a href="#1-异或思想" class="headerlink" title="1.异或思想"></a>1.异或思想</h3><h3 id="2-MutationObserver"><a href="#2-MutationObserver" class="headerlink" title="2. MutationObserver"></a>2. MutationObserver</h3><p>创建并返回一个新的观察器，触发指定dom事件，并调用指定的回调函数<br>页面白屏，检查是否插入广告，数据埋点，元素展示/消失</p><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-异或思想&quot;&gt;&lt;a href=&quot;#1-异或思想&quot; class=&quot;headerlink&quot; title=&quot;1.异或思想&quot;&gt;&lt;/a&gt;1.异或思想&lt;/h3&gt;&lt;h3 id=&quot;2-MutationObserver&quot;&gt;&lt;a href=&quot;#2-MutationObserver&quot;</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-7-20学习</title>
+    <link href="http://example.com/2021/07/22/daylearn/2021.7.22/"/>
+    <id>http://example.com/2021/07/22/daylearn/2021.7.22/</id>
+    <published>2021-07-22T14:07:27.981Z</published>
+    <updated>2021-07-22T14:08:45.810Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="node中-readFile-和readAsyncFile"><a href="#node中-readFile-和readAsyncFile" class="headerlink" title="node中 readFile 和readAsyncFile"></a>node中 readFile 和readAsyncFile</h3><p>第一个是异步读取，第二个是异步读取（注重看api的名字）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;node中-readFile-和readAsyncFile&quot;&gt;&lt;a href=&quot;#node中-readFile-和readAsyncFile&quot; class=&quot;headerlink&quot; title=&quot;node中 readFile 和readAsyncFile&quot;&gt;&lt;/a</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
   
   <entry>
     <title>2021-7-21 算法</title>
@@ -62,9 +134,9 @@
     <link href="http://example.com/2021/07/20/daylearn/2021.7.20/"/>
     <id>http://example.com/2021/07/20/daylearn/2021.7.20/</id>
     <published>2021-07-19T23:39:48.052Z</published>
-    <updated>2021-07-20T23:29:48.052Z</updated>
+    <updated>2021-07-21T02:33:26.980Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-树的先中后序遍历"><a href="#1-树的先中后序遍历" class="headerlink" title="1. 树的先中后序遍历"></a>1. 树的先中后序遍历</h3><p>   先中后遍历区别在遍历根节点的时机<br>   <img src="https://i.loli.net/2021/07/20/z7no9QZeKHhTMCL.png" alt="树的遍历.jpg"><br>   先序：ABDECF<br>   中序：BDEACF<br>   后序：BDECFA</p><h3 id="2-计算机主存储器-及bit-字，字节区分"><a href="#2-计算机主存储器-及bit-字，字节区分" class="headerlink" title="2. 计算机主存储器  及bit 字，字节区分"></a>2. 计算机主存储器  及bit 字，字节区分</h3><p><img src="https://i.loli.net/2021/07/20/9wyD3htIPdW8sna.png" alt="存储.jpg"></p><h3 id="3-URL-searchParams-使用"><a href="#3-URL-searchParams-使用" class="headerlink" title="3.URL.searchParams 使用"></a>3.URL.searchParams 使用</h3><p>处理url 参数<br>var URLSearchParams = new URLSearchParams(init);</p><h3 id="4-ts中非空断言"><a href="#4-ts中非空断言" class="headerlink" title="4.ts中非空断言!."></a>4.ts中非空断言!.</h3><p>在变量后面添加一个 ! 就会忽略 undefined 和 null。<br>在react中获取dom节点，React refs 可以用来访问 HTML 节点 DOM。ref.current 的值有时可能是 null（这是因为引用的元素还没有 mounted）<br>在很多情况下，我们能确定 current 元素已经 mounted，因此，null 是不需要的。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> ScrolledInput = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">   <span class="keyword">const</span> ref = React.createRef&lt;HTMLInputElement&gt;();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> goToInput = <span class="function">() =&gt;</span> ref.current.scrollIntoView(); <span class="comment">//compilation error: ref.current is possibly null</span></span><br><span class="line">   <span class="comment">// const goToInput = () =&gt; ref.current!.scrollIntoView(); 优化做法</span></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">       <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;/</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToInput&#125;</span>&gt;</span>Go to Input<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-树的先中后序遍历"><a href="#1-树的先中后序遍历" class="headerlink" title="1. 树的先中后序遍历"></a>1. 树的先中后序遍历</h3><p>   先中后遍历区别在遍历根节点的时机<br>   <img src="https://i.loli.net/2021/07/20/z7no9QZeKHhTMCL.png" alt="树的遍历.jpg"><br>   先序：ABDECF<br>   中序：BDEACF<br>   后序：BDECFA</p><h3 id="2-计算机主存储器-及bit-字，字节区分"><a href="#2-计算机主存储器-及bit-字，字节区分" class="headerlink" title="2. 计算机主存储器  及bit 字，字节区分"></a>2. 计算机主存储器  及bit 字，字节区分</h3><p><img src="https://i.loli.net/2021/07/20/9wyD3htIPdW8sna.png" alt="存储.jpg"></p><h3 id="3-URL-searchParams-使用"><a href="#3-URL-searchParams-使用" class="headerlink" title="3.URL.searchParams 使用"></a>3.URL.searchParams 使用</h3><p>处理url 参数<br>var URLSearchParams = new URLSearchParams(init);</p><h3 id="4-ts中非空断言"><a href="#4-ts中非空断言" class="headerlink" title="4.ts中非空断言!."></a>4.ts中非空断言!.</h3><p>在变量后面添加一个 ! 就会忽略 undefined 和 null。<br>在react中获取dom节点，React refs 可以用来访问 HTML 节点 DOM。ref.current 的值有时可能是 null（这是因为引用的元素还没有 mounted）<br>在很多情况下，我们能确定 current 元素已经 mounted，因此，null 是不需要的。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> ScrolledInput = <span class="function">() =&gt;</span> &#123; </span><br><span class="line">   <span class="keyword">const</span> ref = React.createRef&lt;HTMLInputElement&gt;();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> goToInput = <span class="function">() =&gt;</span> ref.current.scrollIntoView(); <span class="comment">//compilation error: ref.current is possibly null</span></span><br><span class="line">   <span class="comment">// const goToInput = () =&gt; ref.current!.scrollIntoView(); 优化做法</span></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">       <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;/</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToInput&#125;</span>&gt;</span>Go to Input<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
