@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/07/26/daycode/7.26/</loc>
+    <loc>http://example.com/2021/07/25/daylearn/2021.7.23/</loc>
     
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/07/25/daylearn/2021.7.23/</loc>
+    <loc>http://example.com/2021/07/14/daylearn/2021.7.14/</loc>
     
-    <lastmod>2021-07-25</lastmod>
+    <lastmod>2021-07-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/07/28/daylearn/2021.7.28/</loc>
+    
+    <lastmod>2021-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/07/27/daylearn/2021.7.27/</loc>
+    
+    <lastmod>2021-07-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/07/26/daycode/7.26/</loc>
+    
+    <lastmod>2021-07-26</lastmod>
     
   </url>
   
@@ -47,13 +68,6 @@
     <loc>http://example.com/2021/07/19/daylearn/2021.7.19/</loc>
     
     <lastmod>2021-07-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/07/14/daylearn/2021.7.14/</loc>
-    
-    <lastmod>2021-07-18</lastmod>
     
   </url>
   
@@ -151,36 +165,36 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://example.com/tags/day-learn/</loc>
+    <lastmod>2021-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/vue/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/day-code/</loc>
-    <lastmod>2021-07-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/day-learn/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -188,29 +202,36 @@
 
   
   <url>
+    <loc>http://example.com/categories/day-learn/</loc>
+    <lastmod>2021-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/vue/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/day-code/</loc>
-    <lastmod>2021-07-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/day-learn/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Interviews/</loc>
-    <lastmod>2021-07-26</lastmod>
+    <lastmod>2021-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/daylearn/</loc>
+    <lastmod>2021-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
