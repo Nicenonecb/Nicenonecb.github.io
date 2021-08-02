@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-31T17:40:04.437Z</updated>
+  <updated>2021-08-02T00:35:02.648Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021-8-2学习</title>
+    <link href="http://example.com/2021/08/02/daylearn/2021.8.2/"/>
+    <id>http://example.com/2021/08/02/daylearn/2021.8.2/</id>
+    <published>2021-08-02T00:15:19.964Z</published>
+    <updated>2021-08-02T00:35:02.648Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-如何实现-externals"><a href="#1-如何实现-externals" class="headerlink" title="1.如何实现 externals"></a>1.如何实现 externals</h3><p>本来作用是：防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。<br>ExternalsPlugin 追溯到这里</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-如何实现-externals&quot;&gt;&lt;a href=&quot;#1-如何实现-externals&quot; class=&quot;headerlink&quot; title=&quot;1.如何实现 externals&quot;&gt;&lt;/a&gt;1.如何实现 externals&lt;/h3&gt;&lt;p&gt;本来作用是：防止将某些 im</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-7-13 算法主题</title>
+    <link href="http://example.com/2021/08/02/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <id>http://example.com/2021/08/02/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</id>
+    <published>2021-08-02T00:13:22.104Z</published>
+    <updated>2021-08-02T00:14:54.631Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>力扣34. 在排序数组中查找元素的第一个和最后一个位置</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;力扣34. 在排序数组中查找元素的第一个和最后一个位置&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    <category term="算法主题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E4%B8%BB%E9%A2%98/"/>
+    
+    
+    <category term="二分" scheme="http://example.com/tags/%E4%BA%8C%E5%88%86/"/>
+    
+  </entry>
   
   <entry>
     <title>CSAPP 第一章总结</title>
@@ -438,48 +489,6 @@
     
     
     <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021杭州前端市场面试技术考研调研</title>
-    <link href="http://example.com/2021/07/13/%E9%9D%A2%E7%BB%8F/%E9%9D%A2%E7%BB%8F%E6%8A%80%E6%9C%AF%E6%A0%88/"/>
-    <id>http://example.com/2021/07/13/%E9%9D%A2%E7%BB%8F/%E9%9D%A2%E7%BB%8F%E6%8A%80%E6%9C%AF%E6%A0%88/</id>
-    <published>2021-07-13T09:27:10.761Z</published>
-    <updated>2021-07-13T09:40:14.654Z</updated>
-    
-    
-    
-    
-    <category term="Interviews" scheme="http://example.com/categories/Interviews/"/>
-    
-    
-    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一天的vue</title>
-    <link href="http://example.com/2021/07/13/%E7%AC%AC%E4%B8%80%E5%A4%A9%E7%9A%84vue/"/>
-    <id>http://example.com/2021/07/13/%E7%AC%AC%E4%B8%80%E5%A4%A9%E7%9A%84vue/</id>
-    <published>2021-07-12T16:55:36.818Z</published>
-    <updated>2021-07-12T17:08:53.726Z</updated>
-    
-    <content type="html"><![CDATA[<p>123chonga1</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;123chonga1&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="vue" scheme="http://example.com/categories/vue/"/>
-    
-    
-    <category term="vue" scheme="http://example.com/tags/vue/"/>
     
   </entry>
   
