@@ -198,7 +198,7 @@
                             &nbsp;
                             day[code]
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/14/daycode/7.13/">2021-7-13 算法</a></li>  <li class="file"><a href="/2021/07/14/daycode/7.14/">2021-7-14 算法</a></li>  <li class="file"><a href="/2021/07/15/daycode/7.15/">2021-7-15 算法</a></li>  <li class="file"><a href="/2021/07/19/daycode/7.19/">2021-7-19 算法</a></li>  <li class="file"><a href="/2021/07/20/daycode/7.20/">2021-7-20 算法</a></li>  <li class="file"><a href="/2021/07/21/daycode/7.21/">2021-7-21 算法</a></li>  <li class="file"><a href="/2021/07/26/daycode/7.26/">2021-7-26 算法</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/07/14/daycode/7.13/">2021-7-13 算法</a></li>  <li class="file"><a href="/2021/07/14/daycode/7.14/">2021-7-14 算法</a></li>  <li class="file"><a href="/2021/07/15/daycode/7.15/">2021-7-15 算法</a></li>  <li class="file"><a href="/2021/07/19/daycode/7.19/">2021-7-19 算法</a></li>  <li class="file"><a href="/2021/07/20/daycode/7.20/">2021-7-20 算法</a></li>  <li class="file"><a href="/2021/07/21/daycode/7.21/">2021-7-21 算法</a></li>  <li class="file"><a href="/2021/07/26/daycode/7.26/">2021-7-26 算法</a></li>  <li class="file"><a href="/2021/08/02/daycode/8.2/">2021-8-2 算法</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -308,6 +308,91 @@
 </aside>
             
             <section id="main">
+        <article id="post-daycode/8.2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/day-code/">day[code]</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/day-code/" rel="tag">day[code]</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2021/08/02/daycode/8.2/">
+            <time datetime="2021-08-02T14:07:02.554Z" itemprop="datePublished">2021-08-02</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daycode/8.2.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daycode/8.2.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daycode/8.2.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2021/08/02/daycode/8.2/">2021-8-2 算法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// var searchRange = function(nums, target) &#123;</span></span><br><span class="line"><span class="comment">//   return nums.reduce((h, v, i) =&gt; (h[v] ? h[v][1] = i : h[v] = [i, i], h), Object.create(null))[target] || [-1, -1]</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// let n = nums.length ,map = new Map()</span></span><br><span class="line"><span class="comment">// if(!n) return [-1,-1]</span></span><br><span class="line"><span class="comment">// for(let i=0;i&lt;n;i++)&#123;</span></span><br><span class="line"><span class="comment">//     if(target===nums[i])&#123;</span></span><br><span class="line"><span class="comment">//         map.set(nums[i],i)</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// if(map.has(target))&#123;</span></span><br><span class="line"><span class="comment">//     return [map.get(target)-1,map.get(target)]</span></span><br><span class="line"><span class="comment">// &#125;else&#123;</span></span><br><span class="line"><span class="comment">//     return [-1,-1]</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//力扣 1337 api解法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">kWeakRows</span>(<span class="params">mat, k</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  mat.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> map.set(item, index));</span><br><span class="line">  mat.sort()</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: k &#125;, <span class="function">(<span class="params">_, index</span>) =&gt;</span> map.get(mat[index]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> mat =</span><br><span class="line">  [[<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]],</span><br><span class="line">  k = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(kWeakRows(mat, k))</span><br></pre></td></tr></table></figure>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-daylearn/2021.8.2" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -375,10 +460,22 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
             
         
         
             <h3 id="1-如何实现-externals"><a href="#1-如何实现-externals" class="headerlink" title="1.如何实现 externals"></a>1.如何实现 externals</h3><p>本来作用是：防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。<br>ExternalsPlugin 追溯到这里</p>
+<h3 id="2-runtime"><a href="#2-runtime" class="headerlink" title="2. runtime"></a>2. runtime</h3><p>runtime 描述了程序运行时候执行的软件/指令， 在每种语言有着不同的实现。可大可小，在 C 中，runtime 是库代码， 等同于 C runtime library，一系列 C 程序运行所需的函数，在 Java 中，runtime 还提供了 Java 程序运行所需的虚拟机等。</p>
+<p>总而言之，runtime 是一个通用抽象的术语，指的是计算机程序运行的时候所需要的一切代码库，框架，平台等。</p>
+<h3 id="3-yc老哥的启示"><a href="#3-yc老哥的启示" class="headerlink" title="3. yc老哥的启示"></a>3. yc老哥的启示</h3><h4 id="愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点"><a href="#愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点" class="headerlink" title="愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点"></a>愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点</h4><p>看起来你没有区分到 “编译器” 和 “语言”？可能你说的语言是指 runtime，编译器是指 compile-time，没有 gc 代表可以节省掉一堆的开销，因为 gc 一般需要单独的线程来进行处理，并且还需要跟主线程进行同步，而如果没有 gc，通常需要你手动的来释放内存 类似c与c++<br>你需要 free 掉你 molloc（之类）在 heap 上开辟的内存，要不然就会导致内存泄漏，这是很高效同时也很危险的事情<br>而 Rust 通过 ownership 可以既保持高效的同时也不会导致内存泄漏，甚至在编译期就能检查出 ownership 的情况 </p>
 
             </div>
         
@@ -1037,87 +1134,6 @@
         
             <p>力扣 11. 盛最多水的容器<br>[网址]<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/container-with-most-water/">https://leetcode-cn.com/problems/container-with-most-water/</a></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//还是双指针</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxArea</span>(<span class="params">height</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> l =<span class="number">0</span>,r = height.length-<span class="number">1</span>,res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">    <span class="keyword">let</span> area=<span class="built_in">Math</span>.min(height[l],height[r])*(r-l)</span><br><span class="line">    res =<span class="built_in">Math</span>.max(res,area)</span><br><span class="line">    <span class="keyword">if</span>(height[l]&lt;height[r])&#123;</span><br><span class="line">      l++</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      r--</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-daycode/7.20" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/day-code/">day[code]</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/day-code/" rel="tag">day[code]</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2021/07/20/daycode/7.20/">
-            <time datetime="2021-07-20T14:09:08.988Z" itemprop="datePublished">2021-07-20</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/daycode/7.20.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/daycode/7.20.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/daycode/7.20.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2021/07/20/daycode/7.20/">2021-7-20 算法</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-            
-        
-        
-            
             </div>
         
         <footer class="article-footer">

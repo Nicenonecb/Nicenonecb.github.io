@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-02T00:35:02.648Z</updated>
+  <updated>2021-08-02T14:19:53.302Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021-8-2 算法</title>
+    <link href="http://example.com/2021/08/02/daycode/8.2/"/>
+    <id>http://example.com/2021/08/02/daycode/8.2/</id>
+    <published>2021-08-02T14:07:02.554Z</published>
+    <updated>2021-08-02T14:19:53.302Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// var searchRange = function(nums, target) &#123;</span></span><br><span class="line"><span class="comment">//   return nums.reduce((h, v, i) =&gt; (h[v] ? h[v][1] = i : h[v] = [i, i], h), Object.create(null))[target] || [-1, -1]</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// let n = nums.length ,map = new Map()</span></span><br><span class="line"><span class="comment">// if(!n) return [-1,-1]</span></span><br><span class="line"><span class="comment">// for(let i=0;i&lt;n;i++)&#123;</span></span><br><span class="line"><span class="comment">//     if(target===nums[i])&#123;</span></span><br><span class="line"><span class="comment">//         map.set(nums[i],i)</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// if(map.has(target))&#123;</span></span><br><span class="line"><span class="comment">//     return [map.get(target)-1,map.get(target)]</span></span><br><span class="line"><span class="comment">// &#125;else&#123;</span></span><br><span class="line"><span class="comment">//     return [-1,-1]</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//力扣 1337 api解法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">kWeakRows</span>(<span class="params">mat, k</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  mat.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> map.set(item, index));</span><br><span class="line">  mat.sort()</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: k &#125;, <span class="function">(<span class="params">_, index</span>) =&gt;</span> map.get(mat[index]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> mat =</span><br><span class="line">  [[<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]],</span><br><span class="line">  k = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(kWeakRows(mat, k))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    <category term="day[code]" scheme="http://example.com/categories/day-code/"/>
+    
+    
+    <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021-8-2学习</title>
     <link href="http://example.com/2021/08/02/daylearn/2021.8.2/"/>
     <id>http://example.com/2021/08/02/daylearn/2021.8.2/</id>
     <published>2021-08-02T00:15:19.964Z</published>
-    <updated>2021-08-02T00:35:02.648Z</updated>
+    <updated>2021-08-02T14:20:08.343Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-如何实现-externals"><a href="#1-如何实现-externals" class="headerlink" title="1.如何实现 externals"></a>1.如何实现 externals</h3><p>本来作用是：防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。<br>ExternalsPlugin 追溯到这里</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-如何实现-externals"><a href="#1-如何实现-externals" class="headerlink" title="1.如何实现 externals"></a>1.如何实现 externals</h3><p>本来作用是：防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。<br>ExternalsPlugin 追溯到这里</p><h3 id="2-runtime"><a href="#2-runtime" class="headerlink" title="2. runtime"></a>2. runtime</h3><p>runtime 描述了程序运行时候执行的软件/指令， 在每种语言有着不同的实现。可大可小，在 C 中，runtime 是库代码， 等同于 C runtime library，一系列 C 程序运行所需的函数，在 Java 中，runtime 还提供了 Java 程序运行所需的虚拟机等。</p><p>总而言之，runtime 是一个通用抽象的术语，指的是计算机程序运行的时候所需要的一切代码库，框架，平台等。</p><h3 id="3-yc老哥的启示"><a href="#3-yc老哥的启示" class="headerlink" title="3. yc老哥的启示"></a>3. yc老哥的启示</h3><h4 id="愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点"><a href="#愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点" class="headerlink" title="愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点"></a>愚蠢的问题：一门语言没有runtime和gc，它的优势除了快还有啥，编译语言实现gc和runtime的话，是在编译器实现上还是语言上？如果两个都可以的话，哪个会更好一点</h4><p>看起来你没有区分到 “编译器” 和 “语言”？可能你说的语言是指 runtime，编译器是指 compile-time，没有 gc 代表可以节省掉一堆的开销，因为 gc 一般需要单独的线程来进行处理，并且还需要跟主线程进行同步，而如果没有 gc，通常需要你手动的来释放内存 类似c与c++<br>你需要 free 掉你 molloc（之类）在 heap 上开辟的内存，要不然就会导致内存泄漏，这是很高效同时也很危险的事情<br>而 Rust 通过 ownership 可以既保持高效的同时也不会导致内存泄漏，甚至在编译期就能检查出 ownership 的情况 </p>]]></content>
     
     
       
@@ -464,31 +488,6 @@
     
     
     <category term="day[code]" scheme="http://example.com/tags/day-code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021-7-13学习</title>
-    <link href="http://example.com/2021/07/13/daylearn/2021.7.13/"/>
-    <id>http://example.com/2021/07/13/daylearn/2021.7.13/</id>
-    <published>2021-07-13T10:24:34.471Z</published>
-    <updated>2021-07-17T10:14:17.567Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="1-ts中泛型是什么（回顾）"><a href="#1-ts中泛型是什么（回顾）" class="headerlink" title="1.ts中泛型是什么（回顾）"></a>1.ts中泛型是什么（回顾）</h4><p>复用定义的数据接口</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不用泛型写</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>(<span class="params">arg: number</span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//采用泛型，对返回值类型进行约束</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="2-控制反转"><a href="#2-控制反转" class="headerlink" title="2.控制反转"></a>2.控制反转</h4><p>缩写常见（IoC）</p><p>面向对象的设计原则，降低代码耦合度,常见实现方法是依赖注入和依赖查找</p><p>细节：Class A中用到了Class B的对象b，一般情况下，需要在A的代码中显式的new一个B的对象。采用依赖注入技术之后，A的代码只需要定义一个私有的B对象，不需要直接new来获得这个对象，而是通过相关的容器控制程序来将B对象在外部new出来并注入到A类里的引用中。而具体获取的方法、对象被获取时的状态由配置文件（如XML）来指定。</p><h4 id="3-react-更新机制"><a href="#3-react-更新机制" class="headerlink" title="3.react 更新机制"></a>3.react 更新机制</h4><ul><li><p>1.render阶段:render阶段开始于performSyncWorkOnRoot或performConcurrentWorkOnRoot方法的调用。这取决于本次更新是同步更新还是异步更新。</p></li><li><p>2.commit阶段: commitRoot方法的调用。其中rootFiber会作为传参。</p></li><li><p>3.创建Update对象:ReactDOM.render this.setState  this.forceUpdate useState useReduce都可以触发状态更新</p></li><li><p>4.从fiber到root</p></li><li><p>5.调度更新</p><p><img src="C:\Users\大蟒刀\hexo-blog\source_posts\assents\react状态更新流程.jpg" alt="调度更新"></p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;1-ts中泛型是什么（回顾）&quot;&gt;&lt;a href=&quot;#1-ts中泛型是什么（回顾）&quot; class=&quot;headerlink&quot; title=&quot;1.ts中泛型是什么（回顾）&quot;&gt;&lt;/a&gt;1.ts中泛型是什么（回顾）&lt;/h4&gt;&lt;p&gt;复用定义的数据接口&lt;/p&gt;
-&lt;figure </summary>
-      
-    
-    
-    
-    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
-    
-    
-    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
     
   </entry>
   
