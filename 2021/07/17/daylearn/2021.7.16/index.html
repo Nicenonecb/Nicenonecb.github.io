@@ -9,18 +9,20 @@
         <meta name="keywords" content="day[learn]" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1.nrm 换源较为方便切换npm 源 2.node多进程的实现Node.js 提供了 child_process 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js">
+    <meta name="description" content="1.nrm 换源较为方便切换npm 源 2.node多进程的实现Node.js 提供了 child_process 与cluster（底层实现还是child_process） 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js   nodejs  提供了 worker_threads 实现多线">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2021-7-16学习">
 <meta property="og:url" content="http://example.com/2021/07/17/daylearn/2021.7.16/index.html">
 <meta property="og:site_name" content="孤独快乐的时光">
-<meta property="og:description" content="1.nrm 换源较为方便切换npm 源 2.node多进程的实现Node.js 提供了 child_process 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js">
+<meta property="og:description" content="1.nrm 换源较为方便切换npm 源 2.node多进程的实现Node.js 提供了 child_process 与cluster（底层实现还是child_process） 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js   nodejs  提供了 worker_threads 实现多线">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/10/18/89CNkdl6EViZtPq.png">
 <meta property="article:published_time" content="2021-07-17T10:08:50.000Z">
-<meta property="article:modified_time" content="2021-07-17T10:08:50.000Z">
+<meta property="article:modified_time" content="2021-10-18T02:19:17.127Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="day[learn]">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/10/18/89CNkdl6EViZtPq.png">
     
 
     
@@ -212,7 +214,7 @@
                             &nbsp;
                             day[learn]
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/2021/07/17/daylearn/2021.7.16/">2021-7-16学习</a></li>  <li class="file"><a href="/2021/07/17/daylearn/2021.7.13/">2021-7-13学习</a></li>  <li class="file"><a href="/2021/07/17/daylearn/2021.7.15/">2021-7-15学习</a></li>  <li class="file"><a href="/2021/07/20/daylearn/2021.7.19/">2021-7-19学习</a></li>  <li class="file"><a href="/2021/07/21/daylearn/2021.7.20/">2021-7-20学习</a></li>  <li class="file"><a href="/2021/07/22/daylearn/2021.7.22/">2021-7-20学习</a></li>  <li class="file"><a href="/2021/07/27/daylearn/2021.7.27/">2021-7-27学习</a></li>  <li class="file"><a href="/2021/07/31/daylearn/2021.7.14/">2021-7-14学习</a></li>  <li class="file"><a href="/2021/07/31/daylearn/2021.7.23/">2021-7-23学习</a></li>  <li class="file"><a href="/2021/08/02/daylearn/2021.8.2/">2021-8-2学习</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/2021/07/17/daylearn/2021.7.16/">2021-7-16学习</a></li>  <li class="file"><a href="/2021/07/17/daylearn/2021.7.13/">2021-7-13学习</a></li>  <li class="file"><a href="/2021/07/17/daylearn/2021.7.15/">2021-7-15学习</a></li>  <li class="file"><a href="/2021/07/20/daylearn/2021.7.19/">2021-7-19学习</a></li>  <li class="file"><a href="/2021/07/21/daylearn/2021.7.20/">2021-7-20学习</a></li>  <li class="file"><a href="/2021/07/22/daylearn/2021.7.22/">2021-7-20学习</a></li>  <li class="file"><a href="/2021/07/27/daylearn/2021.7.27/">2021-7-27学习</a></li>  <li class="file"><a href="/2021/07/31/daylearn/2021.7.14/">2021-7-14学习</a></li>  <li class="file"><a href="/2021/07/31/daylearn/2021.7.23/">2021-7-23学习</a></li>  <li class="file"><a href="/2021/08/02/daylearn/2021.8.2/">2021-8-2学习</a></li>  <li class="file"><a href="/2021/10/18/daylearn/2021.10.18/">2021-10-18学习</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -239,7 +241,7 @@
                             &nbsp;
                             忍者秘籍
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/09/12/JavaScript%E6%97%85%E9%80%94/%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D/js%E5%87%BD%E6%95%B0/">2021-7-13学习</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/2021/09/12/JavaScript%E6%97%85%E9%80%94/%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D/js%E5%87%BD%E6%95%B0/">忍者秘籍</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -388,7 +390,9 @@
         
         
             <h3 id="1-nrm-换源"><a href="#1-nrm-换源" class="headerlink" title="1.nrm 换源"></a>1.nrm 换源</h3><p>较为方便切换npm 源</p>
-<h3 id="2-node多进程的实现"><a href="#2-node多进程的实现" class="headerlink" title="2.node多进程的实现"></a>2.node多进程的实现</h3><p>Node.js 提供了 child_process 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js  </p>
+<h3 id="2-node多进程的实现"><a href="#2-node多进程的实现" class="headerlink" title="2.node多进程的实现"></a>2.node多进程的实现</h3><p>Node.js 提供了 child_process 与cluster（底层实现还是child_process） 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js  </p>
+<p>nodejs  提供了 worker_threads 实现多线程<br>性能：开启多线程后，时间会减少，但是cpu利用率上升<br><img src="https://i.loli.net/2021/10/18/89CNkdl6EViZtPq.png" alt="nodejs多线程内部机制.png"></p>
+<p><a target="_blank" rel="noopener" href="http://www.google.com/">nodejs线程参考</a></p>
 
             </div>
         
