@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-18T02:20:33.527Z</updated>
+  <updated>2021-10-20T11:41:35.394Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021-10-20学习</title>
+    <link href="http://example.com/2021/10/20/daylearn/2021.10.20/"/>
+    <id>http://example.com/2021/10/20/daylearn/2021.10.20/</id>
+    <published>2021-10-20T06:04:17.664Z</published>
+    <updated>2021-10-20T11:41:35.394Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.dom事件捕获与冒泡</p><p>2.postcss行为</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.dom事件捕获与冒泡&lt;/p&gt;
+&lt;p&gt;2.postcss行为&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
+    
+    
+    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021-10-18学习</title>
     <link href="http://example.com/2021/10/18/daylearn/2021.10.18/"/>
     <id>http://example.com/2021/10/18/daylearn/2021.10.18/</id>
     <published>2021-10-18T02:16:07.403Z</published>
-    <updated>2021-10-18T02:20:33.527Z</updated>
+    <updated>2021-10-20T11:41:29.324Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-babel转译"><a href="#1-babel转译" class="headerlink" title="1 babel转译"></a>1 babel转译</h3><h3 id="Sanitizer-api总结介绍-及其他"><a href="#Sanitizer-api总结介绍-及其他" class="headerlink" title="Sanitizer api总结介绍 及其他"></a>Sanitizer api总结介绍 及其他</h3><h3 id="github-action简介"><a href="#github-action简介" class="headerlink" title="github action简介"></a>github action简介</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-babel转译魔法及node包加载过程"><a href="#1-babel转译魔法及node包加载过程" class="headerlink" title="1 babel转译魔法及node包加载过程"></a>1 babel转译魔法及node包加载过程</h3><p> <img src="https://i.loli.net/2021/10/20/2GI4q5wTutvQWbA.png" alt="加载过程.jpg"></p><p> node在加载包的时候会调用load方法，通过module._extensions<br>  核心代码如下：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Module = <span class="built_in">require</span>(<span class="string">&#x27;module&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line">Module._extensions[<span class="string">&#x27;.js&#x27;</span>] = <span class="function"><span class="keyword">function</span> (<span class="params"><span class="built_in">module</span>, filename</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> content = fs.readFileSync(filename, <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (filename.includes(<span class="string">&#x27;input&#x27;</span>)) &#123;</span><br><span class="line">        content = content.replace(<span class="string">&#x27;已经输出的&#x27;</span>, <span class="string">&#x27;你想替代的&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">module</span>._compile(content, filename);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h3 id="Sanitizer-api总结介绍-及其他"><a href="#Sanitizer-api总结介绍-及其他" class="headerlink" title="Sanitizer api总结介绍 及其他"></a>Sanitizer api总结介绍 及其他</h3><p>危险dom行为：</p><p>1.各种工具的文本粘贴功能</p><p>2.需要渲染服务端返回HTML的场景</p><p>防止xss攻击两种选择<br>1.escape（转译）<br>2.Sanitizer（消毒）</p><p>Sanitizer 对危险dom  进行消毒</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  <span class="attr">allowElements</span>: [],</span><br><span class="line">  <span class="attr">blockElements</span>: [],</span><br><span class="line">  <span class="attr">dropElements</span>: [],</span><br><span class="line">  <span class="attr">allowAttributes</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">dropAttributes</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">allowCustomElements</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">allowComments</span>: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Sanitizer(config)</span><br></pre></td></tr></table></figure><p>allowElements 白名单dom<br>blockElements 黑名单dom</p><h3 id="github-action简介"><a href="#github-action简介" class="headerlink" title="github action简介"></a>github action简介</h3><p>在github仓库通过github action实现自动化、自定义和执行软件开发工作流程。</p><p><a href="https://docs.github.com/cn/actions/creating-actions/about-custom-actions">github 参考文档</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;1-babel转译&quot;&gt;&lt;a href=&quot;#1-babel转译&quot; class=&quot;headerlink&quot; title=&quot;1 babel转译&quot;&gt;&lt;/a&gt;1 babel转译&lt;/h3&gt;&lt;h3 id=&quot;Sanitizer-api总结介绍-及其他&quot;&gt;&lt;a href=&quot;#Sani</summary>
+    <summary type="html">&lt;h3 id=&quot;1-babel转译魔法及node包加载过程&quot;&gt;&lt;a href=&quot;#1-babel转译魔法及node包加载过程&quot; class=&quot;headerlink&quot; title=&quot;1 babel转译魔法及node包加载过程&quot;&gt;&lt;/a&gt;1 babel转译魔法及node包加载过程&lt;/</summary>
       
     
     
@@ -451,31 +477,6 @@
       
     <summary type="html">&lt;h4 id=&quot;1-ts中泛型是什么（回顾）&quot;&gt;&lt;a href=&quot;#1-ts中泛型是什么（回顾）&quot; class=&quot;headerlink&quot; title=&quot;1.ts中泛型是什么（回顾）&quot;&gt;&lt;/a&gt;1.ts中泛型是什么（回顾）&lt;/h4&gt;&lt;p&gt;复用定义的数据接口&lt;/p&gt;
 &lt;figure </summary>
-      
-    
-    
-    
-    <category term="day[learn]" scheme="http://example.com/categories/day-learn/"/>
-    
-    
-    <category term="day[learn]" scheme="http://example.com/tags/day-learn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021-7-16学习</title>
-    <link href="http://example.com/2021/07/17/daylearn/2021.7.16/"/>
-    <id>http://example.com/2021/07/17/daylearn/2021.7.16/</id>
-    <published>2021-07-17T10:08:50.000Z</published>
-    <updated>2021-10-18T02:19:17.127Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-nrm-换源"><a href="#1-nrm-换源" class="headerlink" title="1.nrm 换源"></a>1.nrm 换源</h3><p>较为方便切换npm 源</p><h3 id="2-node多进程的实现"><a href="#2-node多进程的实现" class="headerlink" title="2.node多进程的实现"></a>2.node多进程的实现</h3><p>Node.js 提供了 child_process 与cluster（底层实现还是child_process） 模块支持多进程，通过 child_process.fork(modulePath) 方法可以调用指定模块，衍生新的 Node.js 进程 worker.js  </p><p>nodejs  提供了 worker_threads 实现多线程<br>性能：开启多线程后，时间会减少，但是cpu利用率上升<br><img src="https://i.loli.net/2021/10/18/89CNkdl6EViZtPq.png" alt="nodejs多线程内部机制.png"></p><p><a href="http://www.google.com/">nodejs线程参考</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;1-nrm-换源&quot;&gt;&lt;a href=&quot;#1-nrm-换源&quot; class=&quot;headerlink&quot; title=&quot;1.nrm 换源&quot;&gt;&lt;/a&gt;1.nrm 换源&lt;/h3&gt;&lt;p&gt;较为方便切换npm 源&lt;/p&gt;
-&lt;h3 id=&quot;2-node多进程的实现&quot;&gt;&lt;a href=</summary>
       
     
     
