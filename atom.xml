@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-20T11:41:35.394Z</updated>
+  <updated>2021-10-21T11:54:02.837Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://example.com/2021/10/20/daylearn/2021.10.20/"/>
     <id>http://example.com/2021/10/20/daylearn/2021.10.20/</id>
     <published>2021-10-20T06:04:17.664Z</published>
-    <updated>2021-10-20T11:41:35.394Z</updated>
+    <updated>2021-10-21T11:54:02.837Z</updated>
     
-    <content type="html"><![CDATA[<p>1.dom事件捕获与冒泡</p><p>2.postcss行为</p>]]></content>
+    <content type="html"><![CDATA[<p>1.dom事件捕获与冒泡<br>分别由微软和网景提出</p><p>都是形同事件发生顺序，一个是由当前节点到根结点（冒泡），捕获相反</p><p>element.addEventListener(event, function, useCapture)</p><p>event： 绑定的事件</p><p>function： 执行的回调</p><p>useCapture： false 执行冒泡 capture（捕获）</p><p>延展：事件代理</p><p><a href="https://segmentfault.com/a/1190000005654451">事件捕获与冒泡</a></p><p>2.postcss是预编译吗？</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;1.dom事件捕获与冒泡&lt;/p&gt;
-&lt;p&gt;2.postcss行为&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;1.dom事件捕获与冒泡&lt;br&gt;分别由微软和网景提出&lt;/p&gt;
+&lt;p&gt;都是形同事件发生顺序，一个是由当前节点到根结点（冒泡），捕获相反&lt;/p&gt;
+&lt;p&gt;element.addEventListener(event, function, useCapture)&lt;/p&gt;
+&lt;p&gt;ev</summary>
       
     
     
